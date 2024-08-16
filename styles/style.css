@@ -1,7 +1,16 @@
-.header,
-.main,
-.footer {
+.container {
   width: 1100px;
+}
+
+.address-list {
+  max-width: 240px;
+
+  list-style: none;
+
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  text-underline-offset: 4px;
 }
 
 /* HEADER */
@@ -51,24 +60,12 @@
   justify-self: end;
 }
 
-.header__address-list,
-.footer__address-list {
-  max-width: 240px;
-
-  list-style: none;
-
-  font-style: normal;
-  line-height: 1.35;
-  letter-spacing: 0.01em;
-  text-underline-offset: 4px;
-}
-
 /* MAIN */
 
 /* COVER */
 .cover {
   position: relative;
-  z-index: -3;
+  z-index: 0;
   padding: 165px 50px 51px;
 
   display: flex;
@@ -87,7 +84,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -2;
+  z-index: -1;
 
   width: 100%;
   height: 100%;
@@ -146,10 +143,6 @@ h1 {
   word-spacing: 0.87em;
 }
 
-.cover__description-text>.letter-spacing-extended {
-  word-spacing: 0.2em;
-}
-
 .bet-button {
   padding: 10px 31px;
   width: 256px;
@@ -181,32 +174,28 @@ h1 {
 .lots__card-list {
   margin-top: 27px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
   list-style: none;
   gap: 25px;
 }
 
 .lots__card-list-item {
-  position: relative;
-  z-index: 0;
-
-  padding: 51px 40px 49px;
-
   width: 334px;
 }
 
 .card-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-
   width: 100%;
   height: 100%;
+
+  text-decoration: none;
 }
 
 .card {
+  padding: 51px 40px 49px;
+  position: relative;
   z-index: 0;
-
   height: 100%;
 
   display: flex;
@@ -216,6 +205,9 @@ h1 {
   font-size: 20px;
   line-height: 1.2em;
   color: #fff;
+
+  background-size: cover;
+  background-position: center;
 }
 
 .card__title {
@@ -229,20 +221,15 @@ h1 {
 
 .card_type_film {
   background: url(../images/card-lot-01.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
+  
 }
 
 .card_type_book {
   background: url(../images/card-lot-02.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .card_type_picture {
   background: url(../images/card-lot-03.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .lots__look-more-link {
@@ -266,6 +253,7 @@ h1 {
 
 .about__column-logo {
   padding-top: 35px;
+  padding-right: 17px;
 }
 
 .about__logo {
